@@ -79,6 +79,13 @@ namespace RepositoryExample_15_02_22.Controllers
 
         }
 
+        public ActionResult Sec()
+        {
+            CategoriesModel c = new CategoriesModel();
+            c.cList = rep.GenelListe().OrderBy(x => x.CategoryID).Skip(3).Take(5).ToList();
+            return View(c);
+        }
+
 
 
     }

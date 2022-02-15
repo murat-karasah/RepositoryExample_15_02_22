@@ -1,0 +1,42 @@
+﻿@model RepositoryExample_15_02_22.Models.ProductModel
+@{ ViewBag.Title = "Index"; }
+<div>
+    <form method="post" action="/Category/Index" class="d-inline-flex">
+        <input type="search" name="name" class="form-control" placeholder="Arama..." />
+        <button class="btn btn-success " type="submit">Ara</button>
+    </form>
+</div>
+<hr />
+<a class="btn btn-info float-right" href="/Category/Ekle">Ekle</a>
+<a class="btn btn-info float-right" href="/Category/Sec">Kategori Seç</a>
+<div class="container">
+    <div class="row">
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th> @Html.DisplayFor(x => x.Products.ProductID)</th>
+                    <th> @Html.DisplayFor(x => x.Products.ProductName)</th>
+                    <th> @Html.DisplayFor(x => x.Products.UnitPrice)</th>
+                    <th> </th>
+
+                    <th>Detay</th>
+                    <th>Sil</th>
+                    <th>Güncelle</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.pList)
+                {
+                <tr>
+                    <td>@item.ProductID</td>
+                    <td>@item.ProductName</td>
+                    <td>@item.UnitPrice</td>
+                    <td>@item.Categories.CategoryName</td>
+<td class="text-center"><a href="/Category/Detay/@item.ProductID">Detay</a></td>
+                    <td class="text-center"><a href="/Category/Sil/@item.ProductID">Sil</a></td>
+                    <td class="text-center"><a href="/Category/Guncelle/@item.ProductID">Güncelle</a></td>
+                </tr>}
+            </tbody>
+        </table>
+    </div>
+</div>

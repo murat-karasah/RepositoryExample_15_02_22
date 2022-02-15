@@ -1,0 +1,20 @@
+﻿@model RepositoryExample_15_02_22.Models.ProductModel
+@{
+    ViewBag.Title = "Detay";
+}
+<h2>Detay</h2>
+<div>
+    <h3>Ürünler</h3>
+    <dl>
+        <dt>@Html.DisplayNameFor(x => x.Products.ProductID)</dt>
+        <dd>@Html.DisplayFor(x => x.Products.ProductID)</dd>
+        <dt>@Html.DisplayNameFor(x => x.Products.ProductName)</dt>
+        <dd>@Html.DisplayFor(x => x.Products.ProductName)</dd>
+        <dt>@Html.DisplayNameFor(x => x.Products.UnitPrice)</dt>
+        <dd>@Html.DisplayFor(x => x.Products.UnitPrice)</dd>
+        <dt>@Html.DisplayNameFor(x => x.Products.Categories.CategoryName)</dt>
+        <dd>@Html.DisplayFor(x => x.Products.Categories.CategoryName)</dd>
+    </dl>
+</div>
+<p>@Html.ActionLink("Listeye Geri Dön", "Index")</p>
+

@@ -27,6 +27,7 @@ namespace RepositoryExample_15_02_22.Controllers
             Set().Add(entity);
            // db.Entry(entity).State = EntityState.Added;
         }
+       
         public void Sil(T entity)
         {
             Set().Remove(entity);

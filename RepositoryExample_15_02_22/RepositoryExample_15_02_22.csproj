@@ -115,6 +115,8 @@
     <Compile Include="Controllers\BaseRepository.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\ProductRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -158,6 +160,7 @@
     <Compile Include="Models\Order_Details.cs">
       <DependentUpon>NorthwindDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ProductModel.cs" />
     <Compile Include="Models\Products.cs">
       <DependentUpon>NorthwindDB.tt</DependentUpon>
     </Compile>
@@ -195,6 +198,10 @@
     <Content Include="Views\Category\Detay.cshtml" />
     <Content Include="Views\Category\Ekle.cshtml" />
     <Content Include="Views\Category\Guncelle.cshtml" />
+    <Content Include="Views\Category\Sec.cshtml" />
+    <Content Include="Views\Product\Index.cshtml" />
+    <Content Include="Views\Product\Detay.cshtml" />
+    <Content Include="Views\Product\Ekle.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

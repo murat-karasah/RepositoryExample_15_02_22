@@ -2,9 +2,7 @@
 @{
     ViewBag.Title = "Güncelle";
 }
-
-<h2>KAtegori Güncelle</h2>
-
+<h2>Kategori Güncelle</h2>
 @using (Html.BeginForm())
 {
     <div class="form-horizon">
@@ -16,7 +14,6 @@
             </div>
         </div>
     </div>
-
     <div class="form-horizon">
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">

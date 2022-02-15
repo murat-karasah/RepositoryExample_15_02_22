@@ -1,0 +1,23 @@
+﻿@model RepositoryExample_15_02_22.Models.CategoriesModel
+@{ ViewBag.Title = "Sec"; }
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>@Html.LabelFor(x => x.Categories.CategoryID)</th>
+            <th>@Html.LabelFor(x => x.Categories.CategoryName)</th>
+            <th>@Html.LabelFor(x => x.Categories.Description)</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model.cList)
+        {
+        <tr>
+            <td>@item.CategoryID</td>
+            <td>@item.CategoryName</td>
+            <td>@item.Description</td>
+        </tr>
+        }
+    </tbody>
+    </table>
