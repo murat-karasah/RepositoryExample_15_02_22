@@ -1,9 +1,9 @@
 ﻿@model RepositoryExample_15_02_22.Models.CategoriesModel
 @{
-    ViewBag.Title = "Ekle";
+    ViewBag.Title = "Güncelle";
 }
 
-<h2>KAtegori Ekle</h2>
+<h2>KAtegori Güncelle</h2>
 
 @using (Html.BeginForm())
 {
@@ -22,12 +22,12 @@
         <div class="form-group">
             @Html.LabelFor(x => x.Categories.Description, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(x => x.Categories.Description, new { htmlAttributes = new { @class = "form-control"   } })
+                @Html.EditorFor(x => x.Categories.Description, new { htmlAttributes = new { @class = "form-control" } })
             </div>
         </div>
     </div>
     <div class="form-group">
-        <input type="submit" value="Ekle" class="btn btn-info"/>
+        <input type="submit" value="Güncelle" class="btn btn-info" />
     </div>
 }
 <p>@Html.ActionLink("Listeye Geri Dön", "Index")</p>

@@ -35,7 +35,8 @@ namespace RepositoryExample_15_02_22.Controllers
         public void Guncel()
         {
             db.SaveChanges();
-        }
+         }
+       
         public T Bul(int id)
         {
             return Set().Find(id);

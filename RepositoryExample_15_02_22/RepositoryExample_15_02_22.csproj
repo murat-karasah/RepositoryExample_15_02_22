@@ -194,6 +194,7 @@
     <Content Include="Views\Category\Index.cshtml" />
     <Content Include="Views\Category\Detay.cshtml" />
     <Content Include="Views\Category\Ekle.cshtml" />
+    <Content Include="Views\Category\Guncelle.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -49,5 +49,37 @@ namespace RepositoryExample_15_02_22.Controllers
             return View();
         }
 
+        public ActionResult Sil(int id)
+        {
+            Categories c = rep.Bul(id);
+            rep.Sil(c);
+            rep.Guncel();
+            return RedirectToAction("Index");
+        }
+
+
+        public ActionResult Guncelle(int id)
+        {
+            cm.Categories = rep.Bul(id);
+            return View(cm);
+        }
+        [HttpPost]
+        public ActionResult Guncelle(int id,CategoriesModel cm)
+        {
+            if (ModelState.IsValid)
+            {
+                Categories c = rep.Bul(id);
+                c.CategoryName = cm.Categories.CategoryName;
+                c.Description = cm.Categories.Description;
+                rep.Guncel();
+                return RedirectToAction("Index");
+
+            }
+            return View();
+
+        }
+
+
+
     }
 }

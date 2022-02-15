@@ -19,6 +19,10 @@
                    <th>@Html.DisplayNameFor(x => x.Categories.CategoryName)</th>
                    <th>@Html.DisplayNameFor(x => x.Categories.Description)</th>
                    <th>Detay</th>
+                   <th>Sil</th>
+                   <th>Güncelle</th>
+
+
 
                </tr>
            </thead>
@@ -30,6 +34,8 @@
                     <td>@item.CategoryName</td>
                     <td>@item.Description</td>
                     <td class="text-center"><a href="/Category/Detay/@item.CategoryID">Detay</a></td>
+                    <td class="text-center"><a href="/Category/Sil/@item.CategoryID">Sil</a></td>
+                    <td class="text-center"><a href="/Category/Guncelle/@item.CategoryID">Güncelle</a></td>
                 </tr>
                 }
             </tbody>
